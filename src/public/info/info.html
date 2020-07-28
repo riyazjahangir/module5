@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div ng-show=" info.signedUp">
+            <p>First name: {{ info.user.firstName}}</p>
+            <p>Last name: {{ info.user.lastName}}</p>
+            <p>Email: {{ info.user.email}}</p>
+            <p>Phone: {{ info.user.phone}}</p>
+            <p>Favorite dish: {{ info.user.favoriteDishDetails.name}}</p>
+            <p>{{ info.user.favoriteDishDetails.description}}</p>
+            <img class="img-responsive" ng-src="{{ info.apiPath}}/images/{{ info.user.favoriteDish}}.jpg" alt="{{ info.user.favoriteDishDetails.name}}" />
+
+        </div>
+
+        <div ng-hide=" info.signedUp">
+            <h1>You need to signup first. <a class="btn btn-default" ui-sref="public.signup">Signup now!</a></h1>
+        </div>
+    </div>
+</div>
